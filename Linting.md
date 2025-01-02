@@ -14,12 +14,15 @@ Yes. SHECA will perform a lint on all valid certificates once a week through a s
 
 ## Q: What linters do you run? 
 
-SHECA 主要使用**[pkimetal](https://github.com/pkimetal/pkimetal)**，pkimetal中包含以下linters：
+SHECA mainly uses **[pkimetal](https://github.com/pkimetal/pkimetal)**, which contains the following linters:
+
+General-purpose linters:
 
 certlint: Certificate linter (CABForum TLS; RFC5280).
 pkilint: Certificate, CRL, and OCSP response linter (CABForum TLS and S/MIME; ETSI EN 319 412 and TS 119 495; RFC5280).
 x509lint: Certificate linter (CABForum TLS; RFC5280).
 zlint: Certificate and CRL linter (CABForum TLS, S/MIME, and Code Signing; ETSI EN 319 412 and TS 119 495; RFC5280).
+Special-purpose linters:
 
 badkeys: Detects various public key vulnerabilities.
 dwklint: Detects Debian weak keys (CVE-2008-0166), as required by CABForum Ballot SC-73.
