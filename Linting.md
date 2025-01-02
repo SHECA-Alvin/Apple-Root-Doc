@@ -33,7 +33,7 @@ SHECA mainly uses **[pkimetal](https://github.com/pkimetal/pkimetal)**, which co
 
 ## Q:How often do you update linters and/or linter configurations?
 
-SHECA will deploy the latest version of pkimetal to the test environment every half month, and migrate the version of the test environment to the production environment after the test environment has been running stably for two weeks.
+SHECA releases the latest version of pkimetal to the testing environment every two weeks. After running stably in the testing environment for two weeks, the version is migrated from the testing environment to the production environment.
 
 ## Q: Do you disable any lints from any linters? If so, what lints? How do you decide what lints to disable?
 
