@@ -6,33 +6,32 @@ Yes. Prior to the official issuance of certificates, SHECA issues pre-certificat
 
 ## Q: If a pre-issuance linter detects an issue, what steps are performed?
 
-- First, SHECA will cease certificate issuance immediately and verify the encountered issue. 
-
-- Then, SHECA will run scripts to scan all valid certificates issued to ascertain if there are any certificates with compliance concerns, which will then be reported to BugZilla.
+First, SHECA will immediately stop issuing certificates and check relevant regulations (BR or RFC protocols, etc.) for confirmation. If it is confirmed that there is a problem, SHECA will run a script to scan all valid certificates and revoke all problematic certificates. At the same time, a new case will be opened in BugZilla and reported to Apple Root Program (certificate-authority-program@apple.com).
 
 ## Q: Do you regularly run linters post-issuance?
 
-Yes. SHECA will promptly initiate linters to assess the compliance of newly issued certificates immediately following the certificate issuance. Additionally, SHECA will periodically employ linters to scan all valid certificates for ongoing compliance. 
+Yes. SHECA will perform a lint on all valid certificates once a week through a scheduled task.
 
 ## Q: What linters do you run? 
 
-SHECA primarily uses Zlint, but also uses Cablint and X509lint.
+SHECA 主要使用**[pkimetal](https://github.com/pkimetal/pkimetal)**，pkimetal中包含以下linters：
+
+certlint: Certificate linter (CABForum TLS; RFC5280).
+pkilint: Certificate, CRL, and OCSP response linter (CABForum TLS and S/MIME; ETSI EN 319 412 and TS 119 495; RFC5280).
+x509lint: Certificate linter (CABForum TLS; RFC5280).
+zlint: Certificate and CRL linter (CABForum TLS, S/MIME, and Code Signing; ETSI EN 319 412 and TS 119 495; RFC5280).
+
+badkeys: Detects various public key vulnerabilities.
+dwklint: Detects Debian weak keys (CVE-2008-0166), as required by CABForum Ballot SC-73.
+ftfy: Detects mojibake (character encoding mix-ups).
+pwnedkeys: Detects compromised keys, where the private key was found "in the wild" and reported to the Pwnedkeys service. (NOTE: Since this linter currently involve calling an external API over the internet, it is disabled by default; to enable it via an environment variable, set PKIMETAL_LINTER_PWNEDKEYS_NUMGOROUTINES=<n> where <n> is an integer greater than zero).
+rocacheck: Detects ROCA weak keys (CVE-2017-15361), as required by CABForum Ballot SC-73.
 
 ## Q:How often do you update linters and/or linter configurations?
 
-SHECA will check all updates of Zlint、Cablint、X509lint once a month, and deploy the new version after testing. It will also check for updates to the linter when there are significant rule adjustments from the CA/B Forum.
+SHECA will deploy the latest version of pkimetal to the test environment every half month, and migrate the version of the test environment to the production environment after the test environment has been running stably for two weeks.
 
 ## Q: Do you disable any lints from any linters? If so, what lints? How do you decide what lints to disable?
-
-SHECA uses Zlint, which is currently sourced from: 
-
-- ·[Apple's Certificate Transparency policy - Apple Support](https://support.apple.com/en-us/HT205280)
-
-- [EV Guidelines for TLS Server Certificates – CAB Forum](https://cabforum.org/extended-validation/)
-
-- [ETSI - Digital Signature | Buy Electronic & Digital Signature](https://www.etsi.org/technologies/digital-signature)
-- [GitHub - mozilla/pkipolicy: Documents for Mozilla's PKI policies - certificate root program, etc.](https://github.com/mozilla/pkipolicy)
-- Various RFCs (e.g. [RFC 6818](https://www.ietf.org/rfc/rfc6818.txt), [RFC 4055](https://www.ietf.org/rfc/rfc4055.txt), [RFC 8399](https://www.ietf.org/rfc/rfc8399.txt))
 
 All items in the lints’ checklist will be checked. To ensure the compliance of certificates, SHECA hasn’t disable any lints so far. 
 
@@ -45,7 +44,5 @@ All items in the lints’ checklist will be checked. To ensure the compliance of
 
 ## Q: What is your process for executing lints on all of your valid certificates?
 
-- SHECA executes lints immediately after the issuance of the certificates. 
-- SHECA surpervises the update of linters, lints are executed during the regular batch inspection of valid certificates or when the linter is updated. 
-- If any issues are discovered, SHECA will investigate the causes, report the issues, and take remediations.
+SHECA will perform a lint on all valid certificates once a week through a scheduled task.
 
