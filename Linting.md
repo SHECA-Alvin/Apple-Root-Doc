@@ -23,6 +23,8 @@ SHECA mainly uses **[pkimetal](https://github.com/pkimetal/pkimetal)**, which co
   - [x509lint](https://github.com/kroeckx/x509lint): Certificate linter (CABForum TLS; RFC5280).
   - [zlint](https://github.com/zmap/zlint): Certificate and CRL linter (CABForum TLS, S/MIME, and Code Signing; ETSI EN 319 412 and TS 119 495; RFC5280).
 
+  Special-purpose linters:
+
   - [badkeys](https://github.com/badkeys/badkeys): Detects various public key vulnerabilities.
   - [dwklint](https://github.com/CVE-2008-0166/dwklint): Detects Debian weak keys (CVE-2008-0166), as required by CABForum Ballot [SC-73](https://github.com/cabforum/servercert/pull/500/files#diff-e0ac1bd190515a4f2ec09139d395ef6a8c7e9e5b612957c1f5a2dea80c6a6cfeR1705).
   - [ftfy](https://github.com/rspeer/python-ftfy): Detects mojibake (character encoding mix-ups).
