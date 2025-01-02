@@ -28,7 +28,6 @@ SHECA mainly uses **[pkimetal](https://github.com/pkimetal/pkimetal)**, which co
   - [ftfy](https://github.com/rspeer/python-ftfy): Detects mojibake (character encoding mix-ups).
   - [pwnedkeys](https://https//pwnedkeys.com): Detects compromised keys, where the private key was found "in the wild" and reported to the Pwnedkeys service. (NOTE: Since this linter currently involve calling an external API over the internet, it is **disabled by default**; to enable it via an environment variable, set `PKIMETAL_LINTER_PWNEDKEYS_NUMGOROUTINES=<n>` where `<n>` is an integer greater than zero).
   - [rocacheck](https://github.com/titanous/rocacheck): Detects ROCA weak keys (CVE-2017-15361), as required by CABForum Ballot [SC-73](https://github.com/cabforum/servercert/pull/500/files#diff-e0ac1bd190515a4f2ec09139d395ef6a8c7e9e5b612957c1f5a2dea80c6a6cfeR1706).
-  - 弱密钥（CVE-2017-15361） 。
 
 ## Q:How often do you update linters and/or linter configurations?
 
