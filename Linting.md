@@ -33,7 +33,7 @@ SHECA mainly uses **[pkimetal](https://github.com/pkimetal/pkimetal)**, which co
 
 ## Q:How often do you update linters and/or linter configurations?
 
-SHECA releases the latest version of pkimetal to the testing environment every two weeks. After running stably in the testing environment for two weeks, the version is migrated from the testing environment to the production environment.
+SHECA releases the latest version of pkimetal to the test environment once a month. After the test environment runs stably for one month, it is migrated from the test environment to the production environment.
 
 ## Q: Do you disable any lints from any linters? If so, what lints? How do you decide what lints to disable?
 
@@ -49,4 +49,5 @@ All items in the lints’ checklist will be checked. To ensure the compliance of
 ## Q: What is your process for executing lints on all of your valid certificates?
 
 SHECA will perform a lint on all valid certificates once a week through a scheduled task.
+
 
