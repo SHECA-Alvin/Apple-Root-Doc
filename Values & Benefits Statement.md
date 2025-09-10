@@ -30,7 +30,7 @@ In the event of a compliance incident, our response team takes swift action with
 
 ## Q: How does your organization's internal processes reflect PKI industry standards for annual audits and policy maintenance?
 
-SHECA has implemented a comprehensive annual audit mechanism encompassing both external and internal audits, successfully passing WebTrust audits for an impressive 16 consecutive years. To ensure compliance with audit engagement requirements, we conduct an annual auditor qualification review prior to engaging in the audit. Our compliance team engages in proactive communication with auditors regarding the audit period, scope, and expected report date, ensuring alignment with the latest WebTrust and browser requirements. Audit reports are promptly uploaded to CCADB and our official website. Additionally, we are preparing to launch the ETSI audit engagement starting in 2024, with ongoing communication with the auditor.
+SHECA has implemented a comprehensive annual audit mechanism encompassing both external and internal audits, successfully passing WebTrust audits for an impressive 18 consecutive years. To ensure compliance with audit engagement requirements, we conduct an annual auditor qualification review prior to engaging in the audit. Our compliance team engages in proactive communication with auditors regarding the audit period, scope, and expected report date, ensuring alignment with the latest WebTrust and browser requirements. Audit reports are promptly uploaded to CCADB and our official website. Additionally, we are preparing to launch the ETSI audit engagement starting in 2024, with ongoing communication with the auditor.
 
  
 
@@ -129,4 +129,5 @@ Prior to sharing data with third parties, a comprehensive background investigati
 
 
 # 
+
 
