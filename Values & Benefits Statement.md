@@ -2,20 +2,13 @@
 
 ## Q: What broad value and benefits does your CA provide Apple?
 
-Shanghai Electronic Certification Authority Co., Ltd. (“SHECA”) is a third-party electronic certificate authority established in 1998 in strict compliance with laws and regulations, Our core expertise lies in delivering electronic certification services, electronic identity-related products and services, as well as offering comprehensive solutions in information security product development and integrated system implementation services tailored for enterprises, institutions, and individuals.
+Shanghai Electronic Certification Authority Co., Ltd. (“SHECA”) is a trusted third-party electronic certificate authority established in 1998, strictly adhering to laws and regulations. Our core expertise lies in providing a comprehensive range of electronic certification services, electronic identity-related products, and information security solutions, tailored specifically for enterprises, institutions, and individuals.
 
- 
+With over 25 years of proven excellence, SHECA has earned its position as an industry leader, consistently delivering professional services to millions of enterprises and billions of individual users across various sectors. Our mission is to excel as a digital service provider, committed to providing reliable, secure, and compliant electronic identity authentication services and products. We prioritize safeguarding the security, confidentiality, and accessibility of our clients’ data, ensuring peace of mind for businesses and individuals alike.
 
-With a proven track record spanning 25 years, SHECA has emerged as a leader in the industry, earning a stellar reputation through the provision of professional services to millions of enterprises and billions of individual users across diverse sectors. Our overarching mission is to excel as a digital service provider. Guided by this mission, we are unwaveringly dedicated to furnishing customers with dependable, secure, and compliant electronic identity authentication services and products, safeguarding the security, confidentiality, and accessibility of their data.
+Aligned with Apple’s security strategy focused on "end-to-end encryption," SHECA has placed a strong emphasis on enhancing secure SSL services. Our strategic initiatives aim to deepen Apple users' trust in the Safari browser through localized and comprehensive digital certificate solutions. By advancing SSL and S/MIME services, we seek to elevate the security of users' digital experiences and foster long-term loyalty to the Safari browser.
 
- 
-
-In alignment with Apple's robust security strategy, which prioritizes "end-to-end encryption," encompassing the use of the SSL protocol for network communication encryption, SHECA is deeply committed to advancing secure and reliable SSL services. Our strategic focus is on enhancing the trust of Apple users in the Safari browser by delivering localized and comprehensive digital certificate services. This strategic initiative aims not only to elevate the security of users' digital experiences but also to cultivate heightened loyalty to Safari.
-
- 
-
-Additionally, SHECA is actively championing S/MIME certificate services to fortify the privacy and integrity of electronic emails. The integration of SHECA into the Apple root store is poised to establish a more sophisticated and localized security framework for Apple users, amplifying their confidence in the security infrastructure within the Apple ecosystem.
-
+Furthermore, SHECA is actively collaborating with China’s largest education industry integration provider. We are in the process of integrating our services to provide free certificates and automated solutions for all members of CARSI (China Academic and Research Network for Education). This initiative aims to provide educational institutions across China with seamless and secure certificate issuance and management, enhancing the overall security infrastructure within the education sector and promoting a more secure digital environment for students, faculty, and administrative staff.
 ## Q: How do your processes ensure timely and transparent reporting of compliance incidents?
 
 SHECA has developed a robust "incident management procedure" to govern the classification standards of incidents. Corresponding management processes have been formulated for incidents of varying levels, clearly delineating personnel roles and responsibilities, as outlined in the "Incident Management Procedures" policy.
@@ -129,6 +122,7 @@ Prior to sharing data with third parties, a comprehensive background investigati
 
 
 # 
+
 
 
 
