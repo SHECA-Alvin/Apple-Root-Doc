@@ -30,7 +30,7 @@ In the event of a compliance incident, our response team takes swift action with
 
 ## Q: How does your organization's internal processes reflect PKI industry standards for annual audits and policy maintenance?
 
-SHECA has implemented a comprehensive annual audit mechanism encompassing both external and internal audits, successfully passing WebTrust audits for an impressive 18 consecutive years. To ensure compliance with audit engagement requirements, we conduct an annual auditor qualification review prior to engaging in the audit. Our compliance team engages in proactive communication with auditors regarding the audit period, scope, and expected report date, ensuring alignment with the latest WebTrust and browser requirements. Audit reports are promptly uploaded to CCADB and our official website. Additionally, we are preparing to launch the ETSI audit engagement starting in 2026, with ongoing communication with the auditor.
+SHECA has implemented a comprehensive annual audit mechanism encompassing both external and internal audits, successfully passing WebTrust audits for an impressive 18 consecutive years. To ensure compliance with audit engagement requirements, we conduct an annual auditor qualification review prior to engaging in the audit. Our compliance team engages in proactive communication with auditors regarding the audit period, scope, and expected report date, ensuring alignment with the latest WebTrust and browser requirements. Audit reports are promptly uploaded to CCADB and our official website. In addition, SHECA is preparing for ETSI audit work and will continue to communicate with auditors. In the future, SHECA will be a CA that has passed both WebTrust and ETSI audits.
 
  
 
@@ -58,7 +58,7 @@ As a CA owner, SHECA contributes to browsers' root programs by providing feedbac
 
  
 
-Looking ahead, SHECA is in the process of integrating into the Certificate Transparency (CT) system in 2026, with related work currently underway.
+Looking ahead, SHECA is promoting its integration into the Certificate Transparency (CT) system. Relevant work is currently underway and is expected to be completed in the first half of 2026.
 
  
 
@@ -129,6 +129,7 @@ Prior to sharing data with third parties, a comprehensive background investigati
 
 
 # 
+
 
 
 
