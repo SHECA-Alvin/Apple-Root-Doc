@@ -70,7 +70,7 @@ As one of the foremost certification authorities in China, SHECA is dedicated to
 
  
 
-**Secure and Trustworthy Identity Authentication**: SHECA's primary objective is to deliver a secure method of identity authentication. This involves associating identities with cryptographic keys, meticulously validating entity identities, and issuing certificates to affirm the validity of their public keys. To bolster our reliability in providing trust services, we have attained qualifications such as ISO9001, ISO27001, CMMI3, and have successfully undergone WebTrust audits for 16 consecutive years.
+**Secure and Trustworthy Identity Authentication**: SHECA's primary objective is to deliver a secure method of identity authentication. This involves associating identities with cryptographic keys, meticulously validating entity identities, and issuing certificates to affirm the validity of their public keys. To bolster our reliability in providing trust services, we have attained qualifications such as ISO9001, ISO27001, CMMI3, and have successfully undergone WebTrust audits for 18 consecutive years.
 
  
 
@@ -129,5 +129,6 @@ Prior to sharing data with third parties, a comprehensive background investigati
 
 
 # 
+
 
 
