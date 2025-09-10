@@ -58,7 +58,7 @@ As a CA owner, SHECA contributes to browsers' root programs by providing feedbac
 
  
 
-Looking ahead, SHECA is promoting its integration into the Certificate Transparency (CT) system. Relevant work is currently underway and is expected to be completed in the first half of 2026.
+Looking ahead, SHECA is promoting the Google Certificate Transparency (CT) system. Relevant work is currently underway and is expected to be completed in the first half of 2026.
 
  
 
@@ -129,6 +129,7 @@ Prior to sharing data with third parties, a comprehensive background investigati
 
 
 # 
+
 
 
 
