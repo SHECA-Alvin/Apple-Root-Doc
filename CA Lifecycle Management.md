@@ -2,53 +2,90 @@
 
 ## Q: How many Roots are in active operation?
 
-| Common Name                  | Expiration Date | Signature algorithm | Key length |
-| :--------------------------- | :-------------- | :------------------ | ---------- |
+**Active Root Certificates**
+
+| Common Name                  | Expiration Date | Signature Algorithm | Key Length |
+| ---------------------------- | --------------- | ------------------- | ---------- |
 | UCA Extended Validation Root | 2038-12-31      | RSA                 | 4096       |
 | UCA Global G2 Root           | 2040-12-31      | RSA                 | 4096       |
+
+**Timeline for Converting Legacy Roots to Single-Purpose Roots**
+
+After December 15, 2025, SHECA will fully transition the above two root certificates into single-purpose roots. By December 1, 2025, all non-TLS subordinate CAs under these roots will be revoked according to the following schedule:
+
+| Subordinate CA                                             | Revoked Date |
+| ---------------------------------------------------------- | ------------ |
+| UCA Extended Validation Root → SHECA EV Code Signing CA G3 | 2025-12-01   |
+| UCA Global G2 Root → SHECA Code Signing CA G4              | 2025-12-01   |
+| UCA Global G2 Root → SHECA MV SMIME RSA CA G1              | 2025-12-01   |
+| UCA Global G2 Root → SHECA IV SMIME RSA CA G1              | 2025-12-01   |
+| UCA Global G2 Root → SHECA OV SMIME RSA CA G1              | 2025-12-01   |
+
+**Timeline for Decommissioning Legacy Roots**
+
+Currently, SHECA only uses UCA Extended Validation Root and UCA Global G2 Root. Since the timeline for new roots being integrated into browsers is unpredictable, the cessation of certificate issuance will align with the removal schedules of major browsers.
+
+| CN                           | Hash                                                         | Stop Issuing Certificates |
+| ---------------------------- | ------------------------------------------------------------ | ------------------------- |
+| UCA Extended Validation Root | D43AF9B35473755C9684FC06D7D8CB70EE5C28E773FB294EB41EE71722924D24 | 2030-12-31                |
+| UCA Global G2 Root           | 9BEA11C976FE014764C1BE56A6F914B5A560317ABD9988393382E5161AA0493C | 2030-12-31                |
+
+------
 
 ## Q: How many Roots are planned for?
 
-Current Root Inclusion Plan
+To meet Apple’s requirement for single-purpose root certificates and to accommodate the demand for ECC certificates, SHECA plans to gradually introduce the following root certificates:
 
-| Common Name                  | Expiration Date | Signature algorithm | Key length |
-| :--------------------------- | :-------------- | :------------------ | ---------- |
-| UCA Extended Validation Root | 2038-12-31      | RSA                 | 4096       |
-| UCA Global G2 Root           | 2040-12-31      | RSA                 | 4096       |
+- **Two TLS root certificates (RSA, ECDSA)**
 
- 
+| Common Name                        | Expiration Date     | Signature Algorithm | Key Length |
+| ---------------------------------- | ------------------- | ------------------- | ---------- |
+| UniTrust Global TLS RSA Root CA R1 | 2039-03-27 23:59:59 | RSA                 | 4096       |
+| UniTrust Global TLS ECC Root CA R2 | 2039-03-27 23:59:59 | ECDSA               | secp384r1  |
 
-To align with Apple's root inclusion requirements, which mandate that Certification Authorities (CAs) only apply for single-purpose root certificates, and in response to subscriber demand for Elliptic Curve Cryptography (ECC) algorithm certificates, SHECA outlines its plans to introduce the following single-purpose roots in the future:
+- **Two S/MIME root certificates (RSA, ECDSA)**
 
-- Two root for EV TLS (ECC & RSA);
-- Two root for TLS (ECC & RSA);
-- Three roots for S/MIME (RSA & ECC & EdDSA);
-- Two roots for Client Authentication (ECC & RSA);
-- Two roots for Time Stamping (ECC & RSA);
+| Common Name                          | Expiration Date     | Signature Algorithm | Key Length |
+| ------------------------------------ | ------------------- | ------------------- | ---------- |
+| UniTrust Global SMIME RSA Root CA R1 | 2039-03-27 23:59:59 | RSA                 | 4096       |
+| UniTrust Global SMIME ECC Root CA R2 | 2039-03-27 23:59:59 | ECDSA               | secp384r1  |
+
+- **One Time Stamping root certificate (RSA)**
+
+| Common Name                                  | Expiration Date     | Signature Algorithm | Key Length |
+| -------------------------------------------- | ------------------- | ------------------- | ---------- |
+| UniTrust Global Time Stamping RSA Root CA R1 | 2049-03-27 23:59:59 | RSA                 | 4096       |
+
 
 ## Q: How far in advance of a Root expiring is its replacement signed?
 
-8 years before expiration.
+According to CAB Forum recommendations, CAs should update root certificates every five years. SHECA will sign replacement root certificates **10 years** before the expiration of existing roots to ensure a smooth transition.
 
 ## Q: How are cross-signatures handled between generations?
 
-In light of certain compatibility challenges, SHECA deems it necessary to utilize earlier root certificates for the purpose of cross-signing SHECA certificates. SHECA hereby undertakes full compliance with the regulations established by the relevant community governing cross-signing practices. Upon the satisfaction of basic compatibility prerequisites by the new certificates, SHECA solemnly commits to the cessation of cross-signing activities. It is hereby acknowledged that, as a general practice, the utilization of cross-certificates shall be subject to a constraint, limited to a maximum duration of five years.
+Due to compatibility challenges, SHECA considers it necessary to cross-sign certain certificates using legacy roots. SHECA commits to fully complying with community best practices for cross-signatures. Once new certificates meet compatibility requirements, cross-signing will cease. As a general principle, cross-certificates will be limited to a maximum validity period of five years.
 
 ## Q: What trust purposes is each Root created to server?
 
-UCA Global G2 Root
+**Legacy Root Certificates**
 
-A multi-purpose RSA certificate, currently serving TLS Server Authentication, Client Authentication, Code Signing, Document Signing and Email Protection.
+| Common Name                        | Expiration Date     | Root Purpose (Before 2025-12-01)             | Root Purpose (After 2025-12-01) |
+| ---------------------------------- | ------------------- | -------------------------------------------- | ------------------------------- |
+| UniTrust Global TLS RSA Root CA R1 | 2039-03-27 23:59:59 | Server Authentication, S/MIME, Time Stamping | Server Authentication           |
+| UniTrust Global TLS ECC Root CA R2 | 2039-03-27 23:59:59 | Server Authentication, S/MIME, Time Stamping | Server Authentication           |
 
+**New Root Certificates**
 
+| Common Name                                  | Expiration Date     | Root Purpose          |
+| -------------------------------------------- | ------------------- | --------------------- |
+| UniTrust Global TLS RSA Root CA R1           | 2039-03-27 23:59:59 | Server Authentication |
+| UniTrust Global TLS ECC Root CA R2           | 2039-03-27 23:59:59 | Server Authentication |
+| UniTrust Global SMIME RSA Root CA R1         | 2039-03-27 23:59:59 | S/MIME                |
+| UniTrust Global SMIME ECC Root CA R2         | 2039-03-27 23:59:59 | S/MIME                |
+| UniTrust Global Time Stamping RSA Root CA R1 | 2049-03-27 23:59:59 | Time Stamping         |
 
-UCA Extended Validation Root
+------
 
-A multi-purpose RSA certificate, currently serving TLS Server Authentication, Client Authentication, Code Signing, Document Signing and Email Protection.
-
- 
-
-Our future plan is to generate dedicated Roots for TLS , Code Signing, Document Signing, Time Stamping Certificates, and S/MIME.
 
 ## Q: How comprehensive is the PKI with regards to algorithmic and key size usage?
 
@@ -72,12 +109,10 @@ Upon the generation of a new root certificate, an official root inclusion reques
 
 ## Q: When are new Roots submitted to the Apple Root Program for inclusion?
 
-In adherence to Apple's root inclusion requirements stipulating that Certification Authorities (CAs) should exclusively apply for single-purpose root certificates, SHECA outlines its plan to submit single-purpose root certificates to the Apple Root Program by the year 2024. Subsequently, SHECA commits to conducting new root submissions at five-year intervals moving forward.
+SHECA has submitted a single-purpose root certificate to the Apple Root Certificate Program via CCADB on September 12, 2025, and will continue to submit new root certificates every five years thereafter.
 
- 
-
-SHECA will maintain vigilant oversight of the Baseline Requirements and the root store policy. This proactive monitoring aims to comprehend the lifecycle expectations and facilitate preparations for new root inclusions during the transition period of the root's lifecycle. Upon the issuance of a new root, SHECA will promptly initiate the root inclusion application process with the Root Store operators.
+SHECA will closely monitor baseline requirements and root store policies to ensure that the new root certificate enters the inclusion application process immediately after issuance.
 
 ## Q: When can deprecated Roots be removed from the Apple Root Program?
 
-Deprecated Roots will be removed from the Apple Root Program when SHECA's new root satisfies the basic compatibility requirements, and when all end-entity certificates under that root hierarchy are no longer valid.
+Once new roots meet compatibility requirements and all end-entity certificates under deprecated roots have expired, SHECA will initiate the removal process to ensure legacy roots are completely withdrawn from the Apple Root Program.
