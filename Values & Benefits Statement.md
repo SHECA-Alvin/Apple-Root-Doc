@@ -2,7 +2,7 @@
 
 ## Q: What broad value and benefits does your CA provide Apple?
 
-Shanghai Electronic Certificate Authority Center Co., Ltd. (“SHECA”) is a third-party electronic certificate authority established in 1998 in strict compliance with laws and regulations, Our core expertise lies in delivering electronic certification services, electronic identity-related products and services, as well as offering comprehensive solutions in information security product development and integrated system implementation services tailored for enterprises, institutions, and individuals.
+Shanghai Electronic Certification Authority Co., Ltd. (“SHECA”) is a third-party electronic certificate authority established in 1998 in strict compliance with laws and regulations, Our core expertise lies in delivering electronic certification services, electronic identity-related products and services, as well as offering comprehensive solutions in information security product development and integrated system implementation services tailored for enterprises, institutions, and individuals.
 
  
 
@@ -129,6 +129,7 @@ Prior to sharing data with third parties, a comprehensive background investigati
 
 
 # 
+
 
 
 
