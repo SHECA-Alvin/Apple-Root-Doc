@@ -9,7 +9,7 @@
 | UCA Extended Validation Root | 2038-12-31      | RSA                 | 4096       |
 | UCA Global G2 Root           | 2040-12-31      | RSA                 | 4096       |
 
-**Timeline for Converting Legacy Roots to Single-Purpose Roots**
+**Timeline for transitioning existing root certificates to single-purpose roots**
 
 After December 15, 2025, SHECA will fully transition the above two root certificates into single-purpose roots. By December 1, 2025, all non-TLS subordinate CAs under these roots will be revoked according to the following schedule:
 
@@ -21,7 +21,7 @@ After December 15, 2025, SHECA will fully transition the above two root certific
 | UCA Global G2 Root → SHECA IV SMIME RSA CA G1              | 2025-12-01   |
 | UCA Global G2 Root → SHECA OV SMIME RSA CA G1              | 2025-12-01   |
 
-**Timeline for Decommissioning Legacy Roots**
+**Schedule for the discontinuation of old root certificates**
 
 Currently, SHECA only uses UCA Extended Validation Root and UCA Global G2 Root. Since the timeline for new roots being integrated into browsers is unpredictable, the cessation of certificate issuance will align with the removal schedules of major browsers.
 
@@ -116,3 +116,4 @@ SHECA will closely monitor baseline requirements and root store policies to ensu
 ## Q: When can deprecated Roots be removed from the Apple Root Program?
 
 Once new roots meet compatibility requirements and all end-entity certificates under deprecated roots have expired, SHECA will initiate the removal process to ensure legacy roots are completely withdrawn from the Apple Root Program.
+
